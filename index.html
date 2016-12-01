@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Thingiverse Bot OAuth</title>
+  </head>
+  <body>
+    <script>
+      if(window.location.search && window.location.search.indexOf("?code=") === 0){
+        var redirectUrl = "https://telegram.me/ThingiverseBot?start=" + btoa(window.location.search.substr(6));
+        window.location = redirectUrl;
+      }else{
+        window.location = "https://www.thingiverse.com/login/oauth/authorize?client_id=efd2fc937c32cc74d2ff";
+      }
+    </script>
+    You are being redirected... <a href="https://www.thingiverse.com/login/oauth/authorize?client_id=efd2fc937c32cc74d2ff">Click here if you're stuck here</a>
+  </body>
+</html>
